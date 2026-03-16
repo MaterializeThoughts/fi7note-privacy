@@ -136,11 +136,12 @@ Local workout/profile/settings/draft data remains on your device until you delet
 ### 6.2 Email feedback data
 
 Emails you send to us are retained in our mailbox until no longer needed, unless legal obligations require longer retention.
-You can request deletion via email.
 
 ### 6.3 Review correction / markup-feedback records
 
-If review-correction feedback is submitted, server-side records are retained for product-quality and debugging purposes until deletion is requested or operationally no longer required.
+If review-correction feedback is submitted, server-side records are retained for product-quality and debugging purposes until operationally no longer required.
+
+Because Fi7Note does not require user accounts and these records may not be attributable to an identified individual, we may not be able to associate a deletion request with specific server-side feedback records.
 
 ---
 
@@ -166,7 +167,7 @@ No method of transmission or storage is 100% secure.
 Depending on your jurisdiction, you may have rights to access, correction, deletion, or objection regarding personal data we process.
 Because Fi7Note is largely local-first, many controls are directly available on your device (for example, clear data or uninstall).
 
-For requests regarding server-side or email data, contact us.
+If you contact us with a privacy question, we will review the request in light of the data actually available to us and our ability to associate that request with specific records.
 
 ---
 

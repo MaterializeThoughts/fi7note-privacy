@@ -1,6 +1,6 @@
 # Fi7Note App Privacy Policy
 
-**Effective date:** April 11, 2026
+**Effective date:** June 3, 2026
 
 ## 1. Scope
 
@@ -24,6 +24,7 @@ Email: materialize.thoughts@gmail.com
 Fi7Note is a local-first Android fitness journaling app built for fast workout capture.
 
 Its core flow is:
+
 1. you type workout notes in natural free text,
 2. the app processes that text on your device,
 3. the app shows a structured result for review,
@@ -37,6 +38,7 @@ Fi7Note is **not** a social fitness network, does **not** require a separate Fi7
 Fi7Note is designed around a local-first model.
 
 That means, by default:
+
 - workout text you enter,
 - parsed workout structure,
 - saved workout history,
@@ -48,7 +50,15 @@ are primarily stored and processed on your device.
 
 We do **not** operate Fi7Note as a cloud-first workout logging service.
 
-We also do **not** integrate third-party advertising SDKs, third-party analytics SDKs, or third-party crash-reporting SDKs into the current Fi7Note codebase.
+We do **not** sell personal data.
+
+We do **not** use your workout history as part of a public social feed.
+
+We do **not** use your workout text, exercise names, weights, repetitions, notes, training history, or personal fitness details for advertising profiles.
+
+Fi7Note may use optional, consent-based usage analytics through Firebase / Google Analytics for Firebase. This analytics is disabled unless you actively allow it in the app, and you can change your choice later in Profile.
+
+Fi7Note does not include third-party advertising SDKs or third-party crash-reporting SDKs in the current app codebase.
 
 ## 5. Categories of Data We Process
 
@@ -57,6 +67,7 @@ Depending on how you use Fi7Note, we may process the following categories of dat
 ### 5.1 Data you enter in the app
 
 This may include:
+
 - workout text and notes,
 - exercise names,
 - sets, reps, weight, units,
@@ -67,9 +78,12 @@ This may include:
 
 Because workout entries and related notes may reveal fitness- or health-related information, some jurisdictions may treat parts of this information as sensitive or special-category personal data.
 
+This workout content is used for the app functionality you choose to use. It is not sent to Firebase / Google Analytics.
+
 ### 5.2 Data created or stored by the app on your device
 
 This may include:
+
 - structured workout records derived from your text input,
 - exercise mappings and related review data,
 - app settings,
@@ -80,6 +94,7 @@ This may include:
 ### 5.3 Subscription and purchase-related data
 
 If you purchase Fi7Note through Google Play, we may process limited purchase- or entitlement-related information made available to us or to the app as needed to:
+
 - determine whether paid access should be enabled,
 - verify whether a subscription or purchase is active,
 - apply trial or paid access rules,
@@ -88,10 +103,69 @@ If you purchase Fi7Note through Google Play, we may process limited purchase- or
 
 We do **not** receive your full payment card details from Google Play.
 
-### 5.4 User-initiated support or quality feedback
+Google Play handles billing, payment processing, taxes, renewals, cancellations, refunds, billing disputes, and store-level purchase management under Google’s applicable terms, policies, and infrastructure.
 
-If you contact us or choose to submit support or product-quality feedback, we may process:
-- your email address,
+### 5.4 Optional usage analytics
+
+If you actively allow analytics in the app, Fi7Note may send limited usage analytics to Firebase / Google Analytics for Firebase.
+
+These analytics events are abstract product, funnel, and share-flow events. They may include, for example:
+
+- onboarding started, completed, or skipped,
+- paywall viewed,
+- plan type selected, such as trial, monthly, yearly, or lifetime,
+- checkout started, purchase completed, or purchase cancelled,
+- first workout started,
+- workout saved,
+- review screen opened or confirmed,
+- history or progress screen opened,
+- progress detail opened,
+- smart suggestion seen or used,
+- Share Studio opened,
+- share export started or completed,
+- native share sheet opened,
+- share flow completed or cancelled where technically measurable.
+
+Analytics parameters are limited to abstract values such as:
+
+- app language,
+- source screen or flow,
+- selected unit type,
+- plan type,
+- share component type,
+- share format,
+- generic success, failure, or cancellation reasons,
+- boolean states such as whether recognized items existed.
+
+Fi7Note does **not** send the following to Firebase / Google Analytics:
+
+- workout free text,
+- exercise names,
+- weights,
+- repetitions,
+- notes,
+- concrete workout history,
+- concrete muscle distribution per user,
+- personal fitness details,
+- share recipients,
+- names of other apps you share to,
+- screenshots or exported share images.
+
+Firebase / Google Analytics may process technical identifiers and operational metadata necessary for analytics, such as an app instance identifier or Firebase installation identifier, device and app information, app lifecycle information, approximate location derived from IP address, and related analytics metadata.
+
+We use this optional analytics to understand and improve onboarding, paywall quality, purchase flow quality, sharing/export quality, and general product reliability. If Firebase / Google Analytics is linked with Google Ads, these abstract events may also be used for campaign and conversion measurement. We do not use Fi7Note workout content for ad targeting.
+
+Analytics is off until you choose to allow it. If you decline analytics, Fi7Note continues to work normally. You can later enable or disable analytics in Profile.
+
+### 5.5 Review corrections and product-quality feedback
+
+Fi7Note includes review and correction flows to help you check and fix recognized workout data.
+
+If you choose to share review corrections, product-quality feedback, or support information, we may process the information you choose to submit or explicitly allow for that purpose.
+
+Depending on the specific flow, this may include:
+
+- correction context,
 - your message,
 - screenshots you choose to send,
 - logs or technical context you choose to send or explicitly trigger,
@@ -99,9 +173,12 @@ If you contact us or choose to submit support or product-quality feedback, we ma
 
 Such submissions are optional and are not required for normal use of the core app.
 
-### 5.5 Technical and operational data
+Where Fi7Note provides a setting for automatic review-correction sharing, you can change that setting in Profile.
+
+### 5.6 Technical and operational data
 
 We may process limited technical information where necessary to provide, secure, or troubleshoot the app, such as:
+
 - app version,
 - Android version,
 - device model,
@@ -124,12 +201,17 @@ We use personal data only as necessary for purposes such as:
 - determining paid access entitlement where applicable,
 - responding to support requests,
 - reviewing user-initiated quality feedback,
+- improving parsing quality where you choose to share correction feedback,
+- measuring product quality and funnel performance where you allow analytics,
+- measuring campaign or conversion performance where analytics is enabled and configured for that purpose,
 - complying with legal obligations,
 - enforcing our terms and protecting our rights.
 
 We do **not** sell personal data.
 
 We do **not** use your workout history as part of a public social feed.
+
+We do **not** send your workout text, exercise names, weights, repetitions, notes, concrete training history, or personal fitness details to Firebase / Google Analytics.
 
 ## 7. Legal Bases
 
@@ -140,6 +222,8 @@ Where EU, EEA, UK, or similar data protection law applies, we process personal d
 - **compliance with legal obligations**,
 - **consent**, where consent is required.
 
+Optional Firebase / Google Analytics usage analytics is based on your consent. You can withdraw this consent later in Profile.
+
 Where workout-related input or related information is regarded as sensitive or special-category personal data under applicable law, we process it only to the extent necessary for the specific functionality you actively use and on an applicable legal basis and additional condition under that law, including your explicit choice to enter and use such information in the app where required.
 
 ## 8. On-Device Processing and Local Storage
@@ -149,11 +233,13 @@ A central characteristic of Fi7Note is that the app’s core parsing and storage
 In ordinary use, workout text and the resulting structured workout data are processed on your device rather than being sent to us as part of a general cloud logging workflow.
 
 Your saved app data may remain on your device unless:
+
 - you edit or delete it,
 - you clear app storage,
 - you uninstall the app,
 - your device, operating system, or platform removes app data or cached components,
-- or you voluntarily send information to us through a support or feedback flow.
+- you voluntarily send information to us through a support, feedback, or correction-sharing flow,
+- or you enable optional analytics, which sends only abstract usage events and technical analytics metadata as described above.
 
 Downloaded or cached app assets, including model-related or platform-managed artifacts, may be managed differently from your user-created workout history.
 
@@ -162,6 +248,7 @@ Downloaded or cached app assets, including model-related or platform-managed art
 Fi7Note is offered through Google Play.
 
 Depending on the offer shown to the user in Google Play, Fi7Note may be available through:
+
 - a monthly subscription,
 - a yearly subscription,
 - and/or a one-time Lifetime Access purchase.
@@ -176,26 +263,48 @@ Billing, payment processing, taxes, renewals, cancellations, refunds, billing di
 
 Deleting the app does not by itself cancel a subscription.
 
-## 10. When Data May Leave the Device
+## 10. Analytics Consent and Withdrawal
+
+Firebase / Google Analytics usage analytics is disabled unless you actively allow it.
+
+During onboarding, Fi7Note asks whether you want to continue with analytics or without analytics. You can use Fi7Note either way.
+
+If you allow analytics, Fi7Note may send the limited abstract events described in this Policy from that point forward.
+
+If you decline analytics, Fi7Note does not send analytics events to Firebase / Google Analytics, and the app continues to work normally.
+
+You can change your analytics choice later in Profile.
+
+If you turn analytics off later, Fi7Note stops sending future analytics events. The app also asks the Firebase Analytics SDK to disable analytics consent and reset analytics data where technically available. However, data that has already been processed into aggregated analytics reports may not always be removable from all historical reports.
+
+Fi7Note does not send a separate analytics event simply saying that you granted or denied analytics consent.
+
+## 11. When Data May Leave the Device
 
 Fi7Note is not designed to continuously transmit workout history to us as part of a general cloud-sync model.
 
 Data may leave the device only in limited situations such as:
+
 - when this is necessary for Google Play purchase or entitlement handling,
+- when you allow optional Firebase / Google Analytics usage analytics,
 - when you contact us by email,
 - when you voluntarily submit a support request,
 - when you voluntarily send product-quality feedback,
+- when you choose to share review corrections or related quality context,
 - when disclosure is required by law,
 - or where limited off-device processing is otherwise necessary for a specific feature you intentionally use.
 
-If you do not trigger such actions, the app’s core workout journaling use remains primarily local.
+If you do not trigger such actions and do not allow analytics or correction sharing, the app’s core workout journaling use remains primarily local.
 
-## 11. Sharing and Disclosures
+## 12. Sharing and Disclosures
 
-We do not share personal data with third parties for their own advertising purposes.
+We do not share personal data with third parties for their own independent advertising purposes.
 
 We may disclose or make data available only where necessary to:
+
 - Google Play and related Google services involved in billing, entitlement, app distribution, or platform operations,
+- Firebase / Google Analytics, if you allow optional analytics,
+- Google Ads, if Firebase / Google Analytics is linked for campaign or conversion measurement,
 - hosting, infrastructure, support, communications, or storage providers acting on our behalf,
 - professional advisers where reasonably necessary,
 - legal, regulatory, judicial, or public authorities where required by law,
@@ -203,13 +312,17 @@ We may disclose or make data available only where necessary to:
 
 Where third-party service providers process data for us, they do so only under appropriate contractual or legal controls, where required.
 
-## 12. International Transfers
+Fi7Note does not send share recipients or the names of other apps you share to as part of its analytics events.
+
+## 13. International Transfers
 
 If personal data is processed by service providers or platform providers outside your country, including outside the European Economic Area or the United Kingdom, such data may be transferred internationally.
 
 Where required by applicable law, we rely on an adequacy decision, standard contractual clauses, or another valid transfer mechanism.
 
-## 13. Retention
+Google services, including Google Play, Firebase, Google Analytics, and Google Ads, may involve processing in countries outside your country of residence, subject to Google’s applicable terms, policies, and transfer mechanisms.
+
+## 14. Retention
 
 We retain personal data only for as long as necessary for the purposes described in this Policy.
 
@@ -217,21 +330,22 @@ In general:
 
 - **local workout history and settings** remain on your device until changed, deleted, or removed by you, or until device/platform behavior removes them,
 - **purchase and entitlement information** is retained as long as reasonably necessary for access control, accounting, dispute handling, legal compliance, and support,
-- **support and feedback submissions** are retained as long as needed to handle the issue, improve the product, document the matter, and comply with legal obligations,
+- **support, feedback, and correction submissions** are retained as long as needed to handle the issue, improve the product, document the matter, and comply with legal obligations,
 - **email correspondence** is retained as long as reasonably necessary for the communication and related legal or operational purposes,
-- **technical support logs or diagnostic materials** are retained only as long as needed for the relevant support, quality, security, or compliance purpose.
+- **technical support logs or diagnostic materials** are retained only as long as needed for the relevant support, quality, security, or compliance purpose,
+- **Firebase / Google Analytics data** is retained according to the relevant Firebase / Google Analytics settings and Google’s applicable policies.
 
 Retention periods may be longer where required or permitted by law.
 
-## 14. Security
+## 15. Security
 
 We take reasonable technical and organizational measures to protect personal data against unauthorized access, loss, misuse, alteration, or disclosure.
 
 However, no method of electronic storage, transmission, or device security is completely risk-free. You are also responsible for securing your device, operating-system access, backups, and local environment.
 
-Where data is transmitted off-device as part of a support, purchase, or feedback process, we use reasonable safeguards appropriate to the nature of that transmission.
+Where data is transmitted off-device as part of a support, purchase, feedback, correction-sharing, or analytics process, we use reasonable safeguards appropriate to the nature of that transmission.
 
-## 15. Accuracy and User Review
+## 16. Accuracy and User Review
 
 Fi7Note is built to handle messy, real-world workout input, but parsing results may still require review.
 
@@ -239,9 +353,10 @@ You are responsible for checking and correcting workout entries, values, units, 
 
 Fi7Note is a journaling and tracking tool only. It is not medical advice, diagnosis, treatment, coaching, or emergency guidance.
 
-## 16. Your Rights
+## 17. Your Rights
 
 Depending on your jurisdiction, you may have rights including:
+
 - access to personal data,
 - rectification of inaccurate data,
 - erasure,
@@ -253,21 +368,23 @@ Depending on your jurisdiction, you may have rights including:
 
 Because Fi7Note is primarily local-first and does not require a general Fi7Note account for core use, some rights may need to be exercised directly on your device where the relevant data is stored only locally.
 
+You can withdraw analytics consent in the app’s Profile settings.
+
 For privacy-related requests, contact: materialize.thoughts@gmail.com
 
-## 17. Children
+## 18. Children
 
 Fi7Note is not directed to children under the minimum age required by applicable law in their jurisdiction.
 
 We do not knowingly seek to collect personal data from children through Fi7Note. If you believe a child has provided personal data inappropriately, contact us.
 
-## 18. Changes to this Policy
+## 19. Changes to this Policy
 
 We may update this App Privacy Policy from time to time.
 
 If we do, we will publish the updated version and update the effective date above. Material changes may also be reflected through the app, the website, the app store listing, or another appropriate channel where required.
 
-## 19. Contact
+## 20. Contact
 
 For privacy-related questions, requests, or complaints, contact:
 

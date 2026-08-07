@@ -1,6 +1,6 @@
 # Fi7Note App Privacy Policy
 
-**Effective date:** June 3, 2026
+**Effective date:** August 7, 2026
 
 ## 1. Scope
 
@@ -57,6 +57,8 @@ We do **not** use your workout history as part of a public social feed.
 We do **not** use your workout text, exercise names, weights, repetitions, notes, training history, or personal fitness details for advertising profiles.
 
 Fi7Note may use optional, consent-based usage analytics through Firebase / Google Analytics for Firebase. This analytics is disabled unless you actively allow it in the app, and you can change your choice later in Profile.
+
+Separately from optional Firebase analytics, production versions of Fi7Note may send a very limited set of predefined, aggregate usage counters to a Fi7Note-operated endpoint hosted on Cloudflare infrastructure. These counters are designed only to measure coarse product and funnel stages, do not create a Fi7Note user profile, and operate independently of the Firebase analytics consent setting.
 
 Fi7Note does not include third-party advertising SDKs or third-party crash-reporting SDKs in the current app codebase.
 
@@ -157,7 +159,48 @@ We use this optional analytics to understand and improve onboarding, paywall qua
 
 Analytics is off until you choose to allow it. If you decline analytics, Fi7Note continues to work normally. You can later enable or disable analytics in Profile.
 
-### 5.5 Review corrections and product-quality feedback
+### 5.5 Minimal aggregate usage counters
+
+Separately from Firebase / Google Analytics, production versions of Fi7Note may send a small number of predefined event counters to a Fi7Note-operated endpoint hosted using Cloudflare Workers and Cloudflare D1.
+
+These counters are used only to understand coarse product and funnel performance, for example whether app sessions reach stages such as:
+
+- app start,
+- onboarding start, individual onboarding stages, and onboarding completion,
+- first workout start and review,
+- first, second, or third successfully saved workout,
+- paywall view or plan selection,
+- checkout start, cancellation, failure, or purchase completion.
+
+For such a counter request, Fi7Note sends only:
+
+- a predefined event name, and
+- the Fi7Note app version.
+
+Fi7Note does **not** include any of the following in the counter payload:
+
+- workout text,
+- exercise names, weights, repetitions, notes, or concrete workout history,
+- names, email addresses, or account identifiers,
+- Fi7Note user IDs,
+- installation IDs,
+- Firebase installation or app-instance identifiers,
+- advertising IDs,
+- Android IDs or other device identifiers,
+- session IDs,
+- device model or Android version,
+- exact client-side timestamps,
+- share recipients or exported share content.
+
+The counter endpoint determines the calendar day server-side and updates an aggregate count for the combination of day, event, and app version. The Fi7Note D1 counter database does not store a per-user or per-installation event history and is not designed to identify whether two counter requests came from the same person or device.
+
+As with any internet connection, Cloudflare necessarily receives network information such as the source IP address while routing and processing the HTTPS request. Fi7Note does not include the IP address as an event parameter and does not store it in the D1 counter database. Cloudflare may process limited network and security metadata as necessary to provide and protect its infrastructure.
+
+The D1 database used for these aggregate counters is configured with Cloudflare's **EU jurisdiction**, which restricts where that D1 database runs and stores its persisted database data to the European Union.
+
+This minimal counter system is technically and organizationally separate from Firebase / Google Analytics. It does not use Firebase identifiers, is not linked to Firebase user or analytics profiles, and continues to operate even if you do not consent to optional Firebase / Google Analytics. It is not used to create advertising profiles or to target advertising to individual users.
+
+### 5.6 Review corrections and product-quality feedback
 
 Fi7Note includes review and correction flows to help you check and fix recognized workout data.
 
@@ -175,7 +218,7 @@ Such submissions are optional and are not required for normal use of the core ap
 
 Where Fi7Note provides a setting for automatic review-correction sharing, you can change that setting in Profile.
 
-### 5.6 Technical and operational data
+### 5.7 Technical and operational data
 
 We may process limited technical information where necessary to provide, secure, or troubleshoot the app, such as:
 
@@ -202,8 +245,9 @@ We use personal data only as necessary for purposes such as:
 - responding to support requests,
 - reviewing user-initiated quality feedback,
 - improving parsing quality where you choose to share correction feedback,
-- measuring product quality and funnel performance where you allow analytics,
-- measuring campaign or conversion performance where analytics is enabled and configured for that purpose,
+- measuring product quality and detailed funnel performance where you allow optional Firebase analytics,
+- measuring coarse aggregate product and funnel performance through the minimal counter system described above,
+- measuring campaign or conversion performance where optional analytics is enabled and configured for that purpose,
 - complying with legal obligations,
 - enforcing our terms and protecting our rights.
 
@@ -211,7 +255,7 @@ We do **not** sell personal data.
 
 We do **not** use your workout history as part of a public social feed.
 
-We do **not** send your workout text, exercise names, weights, repetitions, notes, concrete training history, or personal fitness details to Firebase / Google Analytics.
+We do **not** send your workout text, exercise names, weights, repetitions, notes, concrete training history, or personal fitness details to Firebase / Google Analytics or to the minimal aggregate counter system.
 
 ## 7. Legal Bases
 
@@ -223,6 +267,8 @@ Where EU, EEA, UK, or similar data protection law applies, we process personal d
 - **consent**, where consent is required.
 
 Optional Firebase / Google Analytics usage analytics is based on your consent. You can withdraw this consent later in Profile.
+
+Where the transmission of network information in connection with the minimal aggregate counter constitutes processing of personal data, we rely on our legitimate interests in operating and improving Fi7Note and understanding basic product and funnel performance. The counter is deliberately data-minimized: it uses no persistent user, installation, advertising, Firebase, or device identifier and does not create individual usage profiles.
 
 Where workout-related input or related information is regarded as sensitive or special-category personal data under applicable law, we process it only to the extent necessary for the specific functionality you actively use and on an applicable legal basis and additional condition under that law, including your explicit choice to enter and use such information in the app where required.
 
@@ -239,7 +285,8 @@ Your saved app data may remain on your device unless:
 - you uninstall the app,
 - your device, operating system, or platform removes app data or cached components,
 - you voluntarily send information to us through a support, feedback, or correction-sharing flow,
-- or you enable optional analytics, which sends only abstract usage events and technical analytics metadata as described above.
+- you enable optional Firebase analytics, which sends only abstract usage events and technical analytics metadata as described above,
+- or the app sends the minimal aggregate usage counters described in Section 5.5.
 
 Downloaded or cached app assets, including model-related or platform-managed artifacts, may be managed differently from your user-created workout history.
 
@@ -263,7 +310,7 @@ Billing, payment processing, taxes, renewals, cancellations, refunds, billing di
 
 Deleting the app does not by itself cancel a subscription.
 
-## 10. Analytics Consent and Withdrawal
+## 10. Firebase Analytics Consent, Withdrawal, and Aggregate Counters
 
 Firebase / Google Analytics usage analytics is disabled unless you actively allow it.
 
@@ -277,7 +324,9 @@ You can change your analytics choice later in Profile.
 
 If you turn analytics off later, Fi7Note stops sending future analytics events. The app also asks the Firebase Analytics SDK to disable analytics consent and reset analytics data where technically available. However, data that has already been processed into aggregated analytics reports may not always be removable from all historical reports.
 
-Fi7Note does not send a separate analytics event simply saying that you granted or denied analytics consent.
+Fi7Note does not send a separate Firebase analytics event simply saying that you granted or denied analytics consent.
+
+The analytics consent setting described in this section controls Firebase / Google Analytics. It does **not** control the minimal aggregate counter system described in Section 5.5. Those counters operate independently and may therefore be sent whether you allow or decline optional Firebase analytics. The counter system does not use Firebase identifiers and does not create an individual user or installation profile.
 
 ## 11. When Data May Leave the Device
 
@@ -286,6 +335,7 @@ Fi7Note is not designed to continuously transmit workout history to us as part o
 Data may leave the device only in limited situations such as:
 
 - when this is necessary for Google Play purchase or entitlement handling,
+- when the app sends the minimal aggregate usage counters described in Section 5.5,
 - when you allow optional Firebase / Google Analytics usage analytics,
 - when you contact us by email,
 - when you voluntarily submit a support request,
@@ -294,7 +344,7 @@ Data may leave the device only in limited situations such as:
 - when disclosure is required by law,
 - or where limited off-device processing is otherwise necessary for a specific feature you intentionally use.
 
-If you do not trigger such actions and do not allow analytics or correction sharing, the app’s core workout journaling use remains primarily local.
+Even when you do not allow optional Firebase analytics or use support/correction-sharing features, the minimal aggregate counters described in Section 5.5 may still leave the device. Your workout content and concrete workout history remain local unless another specific feature described in this Policy causes them to be transmitted.
 
 ## 12. Sharing and Disclosures
 
@@ -303,6 +353,7 @@ We do not share personal data with third parties for their own independent adver
 We may disclose or make data available only where necessary to:
 
 - Google Play and related Google services involved in billing, entitlement, app distribution, or platform operations,
+- Cloudflare, as an infrastructure and processing provider for the minimal aggregate counter endpoint and D1 database,
 - Firebase / Google Analytics, if you allow optional analytics,
 - Google Ads, if Firebase / Google Analytics is linked for campaign or conversion measurement,
 - hosting, infrastructure, support, communications, or storage providers acting on our behalf,
@@ -322,6 +373,10 @@ Where required by applicable law, we rely on an adequacy decision, standard cont
 
 Google services, including Google Play, Firebase, Google Analytics, and Google Ads, may involve processing in countries outside your country of residence, subject to Google’s applicable terms, policies, and transfer mechanisms.
 
+Cloudflare is a global infrastructure provider headquartered in the United States. Cloudflare may process network traffic and related service data through its global network. Cloudflare states that, where it acts as a processor, it processes customer and end-user content on behalf of its customers under its applicable data processing terms. The D1 database used by Fi7Note for the aggregate counters is configured with an EU jurisdiction, so the persisted D1 database is restricted to running and storing its database data within the European Union. This jurisdiction setting does not mean that all Worker request processing is necessarily limited to the EU. Where an international transfer requires a transfer mechanism, Cloudflare's applicable contractual and legal transfer safeguards may apply.
+
+Cloudflare privacy information is available at: https://www.cloudflare.com/policies/privacy/
+
 ## 14. Retention
 
 We retain personal data only for as long as necessary for the purposes described in this Policy.
@@ -333,7 +388,8 @@ In general:
 - **support, feedback, and correction submissions** are retained as long as needed to handle the issue, improve the product, document the matter, and comply with legal obligations,
 - **email correspondence** is retained as long as reasonably necessary for the communication and related legal or operational purposes,
 - **technical support logs or diagnostic materials** are retained only as long as needed for the relevant support, quality, security, or compliance purpose,
-- **Firebase / Google Analytics data** is retained according to the relevant Firebase / Google Analytics settings and Google’s applicable policies.
+- **Firebase / Google Analytics data** is retained according to the relevant Firebase / Google Analytics settings and Google’s applicable policies,
+- **minimal aggregate counter data** is stored as aggregate daily counts by event and app version for as long as reasonably necessary to compare product and funnel performance over time. These counter records do not contain a Fi7Note user ID, installation ID, Firebase ID, advertising ID, Android ID, session ID, or workout content. Cloudflare may retain limited service, security, or operational metadata according to its applicable service configuration, legal obligations, and policies.
 
 Retention periods may be longer where required or permitted by law.
 
@@ -343,7 +399,7 @@ We take reasonable technical and organizational measures to protect personal dat
 
 However, no method of electronic storage, transmission, or device security is completely risk-free. You are also responsible for securing your device, operating-system access, backups, and local environment.
 
-Where data is transmitted off-device as part of a support, purchase, feedback, correction-sharing, or analytics process, we use reasonable safeguards appropriate to the nature of that transmission.
+Where data is transmitted off-device as part of a support, purchase, feedback, correction-sharing, optional analytics, or aggregate-counter process, we use reasonable safeguards appropriate to the nature of that transmission. Counter requests are transmitted over HTTPS. Fi7Note’s D1 counter database is configured for EU jurisdiction and Cloudflare D1 encrypts stored database data at rest and data in transit within its service infrastructure.
 
 ## 16. Accuracy and User Review
 
@@ -368,7 +424,7 @@ Depending on your jurisdiction, you may have rights including:
 
 Because Fi7Note is primarily local-first and does not require a general Fi7Note account for core use, some rights may need to be exercised directly on your device where the relevant data is stored only locally.
 
-You can withdraw analytics consent in the app’s Profile settings.
+You can withdraw optional Firebase / Google Analytics consent in the app’s Profile settings. This setting does not disable the minimal aggregate counters described in Section 5.5.
 
 For privacy-related requests, contact: materialize.thoughts@gmail.com
 
